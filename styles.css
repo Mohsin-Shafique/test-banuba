@@ -551,12 +551,21 @@ input[name="category"]:checked + label {
   align-items: center; /* Center the effects */
   z-index: 0;
 }
-
 .effects-list {
   display: flex;
   justify-content: center;
   width: 100%;
   flex-wrap: wrap; /* Wrap icons on smaller screens */
+}
+
+/* Adjust positioning on mobile and small screens */
+@media (max-width: 768px) {
+  /* Adjust the breakpoint as needed */
+  .effects-list {
+    margin-top: -20px; /* Move the element up */
+    /* Or use padding-top if you prefer */
+    /* padding-top: 20px; */
+  }
 }
 
 .effect-icon {
