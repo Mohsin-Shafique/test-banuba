@@ -337,62 +337,62 @@ export const effectsList = {
     },
   },
 
-  face_tracking: {
-    label: "Face Tracking",
-    categories: {
-      background_foreground: {
-        label: "Background/Foreground",
-        effects: [
-          { name: "BG.zip", icon: "BG.png" },
-          { name: "FG.zip", icon: "FG.png" },
-        ],
-      },
-      body_segmentation: {
-        label: "Body segmentation",
-        effects: [{ name: "Full_Body.zip" }],
-      },
-      distance_to_phone: {
-        label: "Distance to camera",
-        effects: [
-          {
-            name: "test_Ruler.zip",
-            control: "analyze",
-            params: ["onDataUpdate()"],
-          },
-        ],
-      },
-      eye_segmentation: {
-        label: "Eye segmentation",
-        effects: [{ name: "Eye_lenses.zip" }],
-      },
-      hair_segmentation: {
-        label: "Hair segmentation",
-        effects: [{ name: "Hair.zip" }],
-      },
-      landmarks: {
-        label: "Landmarks",
-        effects: [{ name: "DebugFRX.zip" }],
-      },
-      lips_segmentation: {
-        label: "Lips segmentation",
-        effects: [{ name: "Lips.zip" }],
-      },
-      skin_segmentation: {
-        label: "Skin Segmentation",
-        effects: [{ name: "Skin.zip" }],
-      },
-      analytics: {
-        label: "Analytics",
-        effects: [
-          {
-            name: "heart_rate.zip",
-            control: "analyze",
-            params: ["onDataUpdate()"],
-          },
-        ],
-      },
-    },
-  },
+  // face_tracking: {
+  //   label: "Face Tracking",
+  //   categories: {
+  //     background_foreground: {
+  //       label: "Background/Foreground",
+  //       effects: [
+  //         { name: "BG.zip", icon: "BG.png" },
+  //         { name: "FG.zip", icon: "FG.png" },
+  //       ],
+  //     },
+  //     body_segmentation: {
+  //       label: "Body segmentation",
+  //       effects: [{ name: "Full_Body.zip" }],
+  //     },
+  //     distance_to_phone: {
+  //       label: "Distance to camera",
+  //       effects: [
+  //         {
+  //           name: "test_Ruler.zip",
+  //           control: "analyze",
+  //           params: ["onDataUpdate()"],
+  //         },
+  //       ],
+  //     },
+  //     eye_segmentation: {
+  //       label: "Eye segmentation",
+  //       effects: [{ name: "Eye_lenses.zip" }],
+  //     },
+  //     hair_segmentation: {
+  //       label: "Hair segmentation",
+  //       effects: [{ name: "Hair.zip" }],
+  //     },
+  //     landmarks: {
+  //       label: "Landmarks",
+  //       effects: [{ name: "DebugFRX.zip" }],
+  //     },
+  //     lips_segmentation: {
+  //       label: "Lips segmentation",
+  //       effects: [{ name: "Lips.zip" }],
+  //     },
+  //     skin_segmentation: {
+  //       label: "Skin Segmentation",
+  //       effects: [{ name: "Skin.zip" }],
+  //     },
+  //     analytics: {
+  //       label: "Analytics",
+  //       effects: [
+  //         {
+  //           name: "heart_rate.zip",
+  //           control: "analyze",
+  //           params: ["onDataUpdate()"],
+  //         },
+  //       ],
+  //     },
+  //   },
+  // },
 
   face_masks: {
     label: "Face Masks",
@@ -460,7 +460,7 @@ export const effectsList = {
         effects: [
           { name: "Eye_lenses_Blue.zip", icon: "Eye_lenses_Blue.png" },
           { name: "Eye_lenses_Green.zip", icon: "Eye_lenses_Green.png" },
-          { name: "Eye_lenses_Red.zip", icon: "Eye_lenses_Blue.png" },
+          { name: "Eye_lenses_Red.zip", icon: "Eye_lenses_Red.png" },
           { name: "glasses_RayBan4165_Dark.zip", icon: "Glasses_Dark.png" },
         ],
       },

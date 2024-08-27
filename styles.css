@@ -13,7 +13,7 @@ main {
   max-width: 1280px;
   margin: 0 auto;
   font-family: Inter, sans-serif;
-  position: relative;
+  position: fixed !important;
   padding: 0 20px;
 }
 
@@ -43,7 +43,7 @@ canvas {
   height: 100%;
 }
 
-#fps {
+/* #fps {
   font-size: 10px;
   font-weight: 700;
   line-height: 16px;
@@ -56,7 +56,7 @@ canvas {
   top: 40px;
   left: 1120px;
   opacity: 0.75;
-}
+} */
 
 #image {
   overflow: hidden;
@@ -225,7 +225,7 @@ input[name="category"] + label {
   padding: 20px;
   border-radius: 20px;
   background: #fff;
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -261,7 +261,7 @@ input[name="category"] + label {
 }
 
 .start-screen__webcam {
-  margin-bottom: 12px;
+  margin-bottom: 22px;
 }
 
 .start-screen__webcam label {
@@ -302,7 +302,7 @@ input[name="category"] + label {
 
 .technologies {
   display: flex;
-  justify-content: space-between; /* Keep the original layout for larger screens */
+  justify-content: center;
   flex-wrap: wrap;
   gap: 10px;
   padding: 0 20px;
@@ -379,7 +379,7 @@ input[name="tech"]:checked + label:after {
 .categories {
   font-size: 11px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   margin-top: 16px;
   padding: 2px 16px;
   /* overflow-x: auto; Enable horizontal scrolling */
