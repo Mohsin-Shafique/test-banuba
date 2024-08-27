@@ -18,41 +18,18 @@ const onSourceSelect = () => {
   });
 };
 
-const onWebcamSelect = async (e) => {
-  try {
-    console.log("Webcam button clicked"); // Debugging
-    const constraints = {
-      video: true, // Request video stream
-      audio: false, // Disable audio
-    };
-
-    // Check if media devices are available
-    if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-      const stream = await navigator.mediaDevices.getUserMedia(constraints);
-      const source = getSource(e.target.value, stream);
-      console.log("Source:", source); // Debugging
-      startPlayer(source);
-      onSourceSelect();
-    } else {
-      console.error("Media devices are not supported.");
-    }
-  } catch (error) {
-    console.error("Error accessing webcam:", error);
-  }
+const onWebcamSelect = (e) => {
+  console.log("Webcam button clicked"); // Add this line
+  const source = getSource(e.target.value);
+  console.log("Source:", source); // Add this line
+  startPlayer(source);
+  onSourceSelect();
 };
 
 const onImageSelect = (e) => {
-  try {
-    const source = getSource(e.target.value, e.target.files[0]);
-    if (source) {
-      startPlayer(source);
-      onSourceSelect();
-    } else {
-      console.error("Failed to get image source");
-    }
-  } catch (error) {
-    console.error("Error selecting image source:", error);
-  }
+  const source = getSource(e.target.value, e.target.files[0]);
+  startPlayer(source);
+  onSourceSelect();
 };
 
 webcamSourceButton.addEventListener("click", onWebcamSelect);
