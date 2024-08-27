@@ -19,17 +19,33 @@ const onSourceSelect = () => {
 };
 
 const onWebcamSelect = (e) => {
-  console.log("Webcam button clicked"); // Add this line
-  const source = getSource(e.target.value);
-  console.log("Source:", source); // Add this line
-  startPlayer(source);
-  onSourceSelect();
+  console.log("Webcam button clicked");
+  try {
+    const source = getSource(e.target.value);
+    console.log("Source:", source);
+    if (source) {
+      startPlayer(source);
+      onSourceSelect();
+    } else {
+      console.error("Failed to get webcam source");
+    }
+  } catch (error) {
+    console.error("Error selecting webcam source:", error);
+  }
 };
 
 const onImageSelect = (e) => {
-  const source = getSource(e.target.value, e.target.files[0]);
-  startPlayer(source);
-  onSourceSelect();
+  try {
+    const source = getSource(e.target.value, e.target.files[0]);
+    if (source) {
+      startPlayer(source);
+      onSourceSelect();
+    } else {
+      console.error("Failed to get image source");
+    }
+  } catch (error) {
+    console.error("Error selecting image source:", error);
+  }
 };
 
 webcamSourceButton.addEventListener("click", onWebcamSelect);

@@ -2,10 +2,10 @@ export const spinner = document.querySelector(".start-screen__spinner");
 export const startScreen = document.querySelector(".start-screen");
 export const categoriesBlock = document.querySelector(".categories");
 export const categoriesButtonLeft = document.querySelector(
-  ".categories-button__left",
+  ".categories-button__left"
 );
 export const categoriesButtonRight = document.querySelector(
-  ".categories-button__right",
+  ".categories-button__right"
 );
 export const handGesturesBlock = document.querySelector(".hand-gestures");
 export const handGesturesTipBlock =
@@ -27,21 +27,41 @@ export const imageSourceButton = document.querySelector("#image");
 export const overlay = document.querySelector(".overlay");
 export const fpsBlock = document.querySelector("#fps");
 
-categoriesButtonLeft
-  .querySelector(".categories-button__left-icon")
-  .addEventListener("click", () => {
+// categoriesButtonLeft
+//   .querySelector(".categories-button__left-icon")
+//   .addEventListener("click", () => {
+//     categoriesButtonLeft.classList.add("hidden");
+//     categoriesButtonRight.classList.remove("hidden");
+//     categoriesBlock.style.transform = "translateX(0px)";
+//   });
+const categoriesButtonLeftIcon = categoriesButtonLeft?.querySelector(
+  ".categories-button__left-icon"
+);
+if (categoriesButtonLeftIcon) {
+  categoriesButtonLeftIcon.addEventListener("click", () => {
     categoriesButtonLeft.classList.add("hidden");
     categoriesButtonRight.classList.remove("hidden");
     categoriesBlock.style.transform = "translateX(0px)";
   });
+}
 
-categoriesButtonRight
-  .querySelector(".categories-button__right-icon")
-  .addEventListener("click", () => {
+// categoriesButtonRight
+//   .querySelector(".categories-button__right-icon")
+//   .addEventListener("click", () => {
+//     categoriesButtonLeft.classList.remove("hidden");
+//     categoriesButtonRight.classList.add("hidden");
+//     categoriesBlock.style.transform = "translateX(-400px)";
+//   });
+const categoriesButtonRightIcon = categoriesButtonRight?.querySelector(
+  ".categories-button__right-icon"
+);
+if (categoriesButtonRightIcon) {
+  categoriesButtonRightIcon.addEventListener("click", () => {
     categoriesButtonLeft.classList.remove("hidden");
     categoriesButtonRight.classList.add("hidden");
     categoriesBlock.style.transform = "translateX(-400px)";
   });
+}
 
 document
   .querySelector(".hand-gestures-tip__button")
