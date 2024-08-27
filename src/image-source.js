@@ -19,7 +19,9 @@ const onSourceSelect = () => {
 };
 
 const onWebcamSelect = (e) => {
+  console.log("Webcam button clicked"); // Add this line
   const source = getSource(e.target.value);
+  console.log("Source:", source); // Add this line
   startPlayer(source);
   onSourceSelect();
 };
@@ -31,4 +33,5 @@ const onImageSelect = (e) => {
 };
 
 webcamSourceButton.addEventListener("click", onWebcamSelect);
+webcamSourceButton.addEventListener("touchend", onWebcamSelect); // Add this line for mobile support
 imageSourceButton.addEventListener("change", onImageSelect);
