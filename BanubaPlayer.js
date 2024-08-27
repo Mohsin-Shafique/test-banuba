@@ -35,7 +35,7 @@ const fpsCounter = {
   cam: 0,
   processing: 0,
   render: 0,
-}
+};
 
 let currentEffect;
 
@@ -50,7 +50,7 @@ const [player, modules] = await Promise.all([
       return isSafari && m === "face_tracker"
         ? `https://cdn.jsdelivr.net/npm/@banuba/webar/dist/modules/${m}_lite.zip`
         : `https://cdn.jsdelivr.net/npm/@banuba/webar/dist/modules/${m}.zip`;
-    }),
+    })
   ),
 ]);
 await player.addModule(...modules);
@@ -66,17 +66,17 @@ const startFpsTracking = () => {
   player.addEventListener("framereceived", () => fpsCounter.cam++);
   player.addEventListener(
     "frameprocessed",
-    ({ detail }) => (fpsCounter.processing = 1000 / detail.averagedDuration),
+    ({ detail }) => (fpsCounter.processing = 1000 / detail.averagedDuration)
   );
   player.addEventListener("framerendered", () => fpsCounter.render++);
 
   setInterval(() => {
-    fps.cam = fpsCounter.cam
-    fps.render = fpsCounter.render
-    fps.processing = fpsCounter.processing
-    fpsCounter.cam = 0
-    fpsCounter.render = 0
-  }, 1000)
+    fps.cam = fpsCounter.cam;
+    fps.render = fpsCounter.render;
+    fps.processing = fpsCounter.processing;
+    fpsCounter.cam = 0;
+    fpsCounter.render = 0;
+  }, 1000);
 };
 
 let curResult;
@@ -119,23 +119,24 @@ const renderAnalysisResultFuncs = {
 /**
  * __analyticsState can be "enabled" or "disabled"
  */
-const __analyticsActive = "active"
-const __analyticsInActive = "inactive" 
-let _analyticsState = __analyticsInActive
+const __analyticsActive = "active";
+const __analyticsInActive = "inactive";
+let _analyticsState = __analyticsInActive;
 
 export const startAnalysis = async (effectName, paramString, resultBlock) => {
   analyseFunc = () =>
     renderAnalysisResultFuncs[effectName.split(".")[0]](
       paramString,
-      resultBlock,
+      resultBlock
     );
   player.addEventListener("framedata", analyseFunc);
-  _analyticsState = __analyticsActive
+  _analyticsState = __analyticsActive;
 };
 
 export const stopAnalysis = () => {
-  if (_analyticsState === __analyticsActive) player.removeEventListener("framedata", analyseFunc);
-  _analyticsState = __analyticsInActive
+  if (_analyticsState === __analyticsActive)
+    player.removeEventListener("framedata", analyseFunc);
+  _analyticsState = __analyticsInActive;
 };
 
 export const clearEffect = async () => {
@@ -147,17 +148,34 @@ export const muteToggle = (value) => {
 };
 
 export const getSource = (sourceType, file) => {
-  return sourceType === "webcam" ? new Webcam() : new Image(file);
+  try {
+    if (sourceType === "webcam") {
+      return new Webcam();
+    } else {
+      return new Image(file);
+    }
+  } catch (error) {
+    console.error("Error accessing webcam:", error);
+    alert(
+      "Failed to access the webcam. Please check your browser's permissions and try again."
+    );
+  }
 };
-
 export const getPlayer = () => {
   return player;
 };
 
 export const startPlayer = (source) => {
-  player.use(source, { crop });
-  Dom.render(player, "#webar");
-  startFpsTracking();
+  try {
+    player.use(source, { crop });
+    Dom.render(player, "#webar");
+    startFpsTracking();
+  } catch (error) {
+    console.error("Error starting the player:", error);
+    alert(
+      "There was an issue accessing the webcam. Please make sure you have granted permission and that your browser supports webcam access."
+    );
+  }
 };
 
 export const applyEffect = async (effectName) => {
