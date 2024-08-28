@@ -492,9 +492,9 @@ export const effectsList = {
         effects: [
           { name: "VTO_Hair_blue.zip", icon: "VTO_Hair_blue.png" },
           { name: "VTO_Hair_green.zip", icon: "VTO_Hair_green.png" },
-          { name: "VTO_Hair_Grey.zip", icon: "VTO_Hair_Grey.png" },
-          { name: "VTO_Hair_Brown.zip", icon: "VTO_Hair_Brown.png" },
-          { name: "VTO_Hair_red.zip", icon: "VTO_Hair_strand.png" },
+          // { name: "VTO_Hair_Grey.zip", icon: "VTO_Hair_Grey.png" },
+          // { name: "VTO_Hair_Brown.zip", icon: "VTO_Hair_Brown.png" },
+          // { name: "VTO_Hair_red.zip", icon: "VTO_Hair_strand.png" },
 
           { name: "VTO_Hair_strand.zip", icon: "VTO_Hair_strand.png" }
         ]
@@ -502,9 +502,9 @@ export const effectsList = {
       head_wearings: {
         label: "Head wearings",
         effects: [
-          { name: "VTO_Headdresse_01.zip", icon: "VTO_Hair_strand.png" },
-          { name: "VTO_Cook.zip", icon: "VTO_Hair_strand.png" },
-          { name: "VTO_police.zip", icon: "VTO_Hair_strand.png" }
+          { name: "VTO_Headdresse_01.zip", icon: "VTO_Hair_strand.png" }
+          // { name: "VTO_Cook.zip", icon: "VTO_Hair_strand.png" },
+          // { name: "VTO_police.zip", icon: "VTO_Hair_strand.png" }
         ]
       },
       jewelry: {
