@@ -1,0 +1,445 @@
+{
+  "assets": {
+    "attachments": {
+      "ComposerRT_color": {
+        "type": "color"
+      },
+      "EffectRT0_color": {
+        "type": "color"
+      },
+      "EffectRT0_depth": {
+        "clear": [1.0],
+        "type": "depth"
+      },
+      "blured_hair_strand": {
+        "clear": [0, 0, 0, 0],
+        "load_state": "clear",
+        "store_state": "save",
+        "type": "color"
+      },
+      "colored_hair_strand": {
+        "clear": [0, 0, 0, 0],
+        "load_state": "clear",
+        "store_state": "save",
+        "type": "color"
+      },
+      "v_gblur": {
+        "clear": [0, 0, 0, 0],
+        "load_state": "clear",
+        "store_state": "save",
+        "type": "color"
+      }
+    },
+    "faces": {
+      "face0": {
+        "index": 0,
+        "mesh": "!glfx_FACE"
+      }
+    },
+    "images": {
+      "camera: tex_rgb": {
+        "format": "rgba",
+        "type": "camera"
+      },
+      "camera: tex_uv": {
+        "format": "uv",
+        "type": "camera"
+      },
+      "camera: tex_y": {
+        "format": "y",
+        "type": "camera"
+      },
+      "hair": {
+        "active": true,
+        "recognizer_feature_name": "hair",
+        "type": "segmentation_mask"
+      },
+      "hair_strand": {
+        "active": true,
+        "recognizer_feature_name": "hair_strand",
+        "type": "segmentation_mask"
+      },
+      "null_image.png": {
+        "file_name": "images/null_image.png",
+        "type": "texture"
+      },
+      "null_lut.png": {
+        "file_name": "images/null_lut.png",
+        "type": "texture"
+      },
+      "preview.png": {
+        "file_name": "images/preview.png",
+        "type": "texture"
+      }
+    },
+    "materials": {
+      "$builtin$materials/camera": {
+        "parameters": {
+          "bnb_camera_orientation": {
+            "type": "vec4",
+            "value": [1, 0, 0, 1]
+          },
+          "bnb_camera_scale": {
+            "type": "vec4",
+            "value": [1, 0, 0, 1]
+          },
+          "bnb_view_width_fraction": {
+            "type": "vec4",
+            "value": [1, 0, 0, 0]
+          }
+        },
+        "samplers": [
+          {
+            "image": "camera: tex_y",
+            "name": "tex_y"
+          },
+          {
+            "image": "camera: tex_uv",
+            "name": "tex_uv"
+          },
+          {
+            "image": "camera: tex_rgb",
+            "name": "tex_rgb"
+          }
+        ],
+        "state": {
+          "backfaces": true,
+          "blend": "off",
+          "colorwrite": true,
+          "ztest": false,
+          "zwrite": false
+        }
+      },
+      "$builtin$materials/copy_pixels.0": {
+        "parameters": {},
+        "samplers": [
+          {
+            "image": "ComposerRT_color",
+            "name": "tex_src"
+          }
+        ],
+        "state": {
+          "backfaces": true,
+          "blend": "off",
+          "colorwrite": true,
+          "ztest": false,
+          "zwrite": false
+        }
+      },
+      "shaders/TriMat": {
+        "built_in_samplers": [],
+        "samplers": [
+          {
+            "image": "hair",
+            "name": "glfx_HAIR_MASK"
+          },
+          {
+            "image": "colored_hair_strand",
+            "name": "colored_hair_strand"
+          },
+          {
+            "image": "blured_hair_strand",
+            "name": "blured_hair_strand"
+          },
+          {
+            "image": "ComposerRT_color",
+            "name": "glfx_BACKGROUND"
+          }
+        ],
+        "state": {
+          "backfaces": false,
+          "blend": "off",
+          "colorwrite": true,
+          "ztest": false,
+          "zwrite": false
+        }
+      },
+      "shaders/colored_hair_strand_silver_0": {
+        "built_in_samplers": [],
+        "samplers": [
+          {
+            "image": "hair_strand",
+            "name": "glfx_HAIR_STRAND_MASK"
+          }
+        ],
+        "state": {
+          "backfaces": false,
+          "blend": "off",
+          "colorwrite": true,
+          "ztest": false,
+          "zwrite": false
+        },
+        "parameters": {
+          "shaderVec4": {
+            "0": "0.0 1.0 1.0 1.0"
+          }
+        }
+      },
+
+      "shaders/h_gblur_0": {
+        "built_in_samplers": [],
+        "samplers": [
+          {
+            "image": "v_gblur",
+            "name": "v_gblur"
+          }
+        ],
+        "state": {
+          "backfaces": false,
+          "blend": "off",
+          "colorwrite": true,
+          "ztest": false,
+          "zwrite": false
+        }
+      },
+      "shaders/v_gblur_0": {
+        "built_in_samplers": [],
+        "samplers": [
+          {
+            "image": "colored_hair_strand",
+            "name": "colored_hair_strand"
+          }
+        ],
+        "state": {
+          "backfaces": false,
+          "blend": "off",
+          "colorwrite": true,
+          "ztest": false,
+          "zwrite": false
+        }
+      }
+    },
+    "media": {
+      "frx": {
+        "type": "video"
+      }
+    },
+    "meshes": {
+      "!glfx_FACE": "$builtin$meshes/face.stream:0",
+      "camera_surface": "$builtin$meshes/fs_tri",
+      "tri.bsm2": "meshes/tri.bsm2"
+    },
+    "morphs": {}
+  },
+  "components": {
+    "ComposerRT_copy": {
+      "materials": ["$builtin$materials/copy_pixels.0"],
+      "mesh": "camera_surface",
+      "type": "mesh_instance"
+    },
+    "camera_surface": {
+      "materials": ["$builtin$materials/camera"],
+      "mesh": "camera_surface",
+      "type": "mesh_instance"
+    },
+    "colored_hair_strand_silver_0": {
+      "materials": ["shaders/colored_hair_strand_silver_0"],
+      "mesh": "tri.bsm2",
+      "type": "mesh_instance"
+    },
+    "face_tracker:0": {
+      "face": "face0",
+      "type": "face_tracker"
+    },
+    "h_gblur_0": {
+      "materials": ["shaders/h_gblur_0"],
+      "mesh": "tri.bsm2",
+      "type": "mesh_instance"
+    },
+    "v_gblur_0": {
+      "materials": ["shaders/v_gblur_0"],
+      "mesh": "tri.bsm2",
+      "type": "mesh_instance"
+    }
+  },
+  "entities": {
+    "ComposerRT_copy_append_to_root__": {
+      "components": ["ComposerRT_copy"],
+      "layer": "ComposerRT_copy"
+    },
+    "append_to_root__colored_hair_strand_silver_0": {
+      "components": ["colored_hair_strand_silver_0"],
+      "layer": "colored_hair_strand"
+    },
+    "append_to_root__h_gblur_0": {
+      "components": ["h_gblur_0"],
+      "layer": "h_gblur"
+    },
+    "append_to_root__v_gblur_0": {
+      "components": ["v_gblur_0"],
+      "layer": "v_gblur"
+    },
+    "camera": {
+      "components": ["camera_surface"],
+      "layer": "composer_pre"
+    },
+    "face_tracker0": {
+      "components": ["face_tracker:0"]
+    },
+    "spawn_entity0": {
+      "add_to_legacy_entities_list": true,
+      "layers": ["TriMat"]
+    },
+    "spawn_entity1": {
+      "add_to_legacy_entities_list": true,
+      "layers": ["TriMat"]
+    },
+    "spawn_entity10": {
+      "add_to_legacy_entities_list": true,
+      "layers": ["TriMat"]
+    },
+    "spawn_entity11": {
+      "add_to_legacy_entities_list": true,
+      "layers": ["TriMat"]
+    },
+    "spawn_entity12": {
+      "add_to_legacy_entities_list": true,
+      "layers": ["TriMat"]
+    },
+    "spawn_entity13": {
+      "add_to_legacy_entities_list": true,
+      "layers": ["TriMat"]
+    },
+    "spawn_entity14": {
+      "add_to_legacy_entities_list": true,
+      "layers": ["TriMat"]
+    },
+    "spawn_entity15": {
+      "add_to_legacy_entities_list": true,
+      "layers": ["TriMat"]
+    },
+    "spawn_entity16": {
+      "add_to_legacy_entities_list": true,
+      "layers": ["TriMat"]
+    },
+    "spawn_entity17": {
+      "add_to_legacy_entities_list": true,
+      "layers": ["TriMat"]
+    },
+    "spawn_entity18": {
+      "add_to_legacy_entities_list": true,
+      "layers": ["TriMat"]
+    },
+    "spawn_entity19": {
+      "add_to_legacy_entities_list": true,
+      "layers": ["TriMat"]
+    },
+    "spawn_entity2": {
+      "add_to_legacy_entities_list": true,
+      "layers": ["TriMat"]
+    },
+    "spawn_entity3": {
+      "add_to_legacy_entities_list": true,
+      "layers": ["TriMat"]
+    },
+    "spawn_entity4": {
+      "add_to_legacy_entities_list": true,
+      "layers": ["TriMat"]
+    },
+    "spawn_entity5": {
+      "add_to_legacy_entities_list": true,
+      "layers": ["TriMat"]
+    },
+    "spawn_entity6": {
+      "add_to_legacy_entities_list": true,
+      "layers": ["TriMat"]
+    },
+    "spawn_entity7": {
+      "add_to_legacy_entities_list": true,
+      "layers": ["TriMat"]
+    },
+    "spawn_entity8": {
+      "add_to_legacy_entities_list": true,
+      "layers": ["TriMat"]
+    },
+    "spawn_entity9": {
+      "add_to_legacy_entities_list": true,
+      "layers": ["TriMat"]
+    }
+  },
+  "hierarchy": {
+    "face_tracker0": [
+      "spawn_entity1",
+      "spawn_entity2",
+      "spawn_entity3",
+      "spawn_entity4",
+      "spawn_entity5",
+      "spawn_entity6",
+      "spawn_entity7",
+      "spawn_entity8",
+      "spawn_entity9",
+      "spawn_entity10",
+      "spawn_entity11",
+      "spawn_entity12",
+      "spawn_entity13",
+      "spawn_entity14",
+      "spawn_entity15",
+      "spawn_entity16",
+      "spawn_entity17",
+      "spawn_entity18",
+      "spawn_entity19"
+    ],
+    "root": [
+      "spawn_entity0",
+      "camera",
+      "face_tracker0",
+      "append_to_root__colored_hair_strand_0",
+      "append_to_root__colored_hair_strand_0",
+      "append_to_root__v_gblur_0",
+      "append_to_root__h_gblur_0",
+      "ComposerRT_copy_append_to_root__"
+    ]
+  },
+  "layers": {
+    "ComposerRT_copy": {},
+    "TriMat": {},
+    "colored_hair_strand": {},
+    "composer_pre": {},
+    "h_gblur": {},
+    "internal_face_morph__": {},
+    "v_gblur": {}
+  },
+  "main_camera": {},
+  "render_list": {
+    "default": [
+      {
+        "layer": "composer_pre",
+        "render_target": "ComposerRT"
+      },
+      {
+        "layer": "colored_hair_strand",
+        "render_target": "colored_hair_strand_RT"
+      },
+      {
+        "layer": "h_gblur",
+        "render_target": "h_gblur_RT"
+      },
+      {
+        "layer": "v_gblur",
+        "render_target": "v_gblur_RT"
+      },
+      {
+        "layer": "TriMat",
+        "render_target": "EffectRT0"
+      }
+    ]
+  },
+  "render_targets": {
+    "ComposerRT": ["ComposerRT_color"],
+    "EffectRT0": ["EffectRT0_color", "EffectRT0_depth"],
+    "colored_hair_strand_RT": {
+      "attachments": ["colored_hair_strand"]
+    },
+    "h_gblur_RT": {
+      "attachments": ["blured_hair_strand"]
+    },
+    "v_gblur_RT": {
+      "attachments": ["v_gblur"]
+    }
+  },
+  "scene": "just_hair_strand",
+  "script": {
+    "entry_point": "config.js",
+    "type": "legacy"
+  }
+}
