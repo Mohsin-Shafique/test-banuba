@@ -83,7 +83,7 @@ canvas {
 
 #reset-button {
   position: absolute;
-  bottom: 142px;
+  bottom: 80px;
   left: 40px;
   width: 40px;
   height: 40px;
@@ -92,14 +92,14 @@ canvas {
 
 @media (max-width: 768px) {
   #reset-button {
-    bottom: 110px; /* Adjust reset button for medium screens */
+    bottom: 80px; /* Adjust reset button for medium screens */
     left: 30px;
   }
 }
 
 @media (max-width: 480px) {
   #reset-button {
-    bottom: 230px; /* Adjust reset button for small screens */
+    bottom: 100px;
     left: 20px;
     width: 20px;
     height: 20px;
@@ -182,7 +182,7 @@ input[name="category"] + label {
 
 .controls {
   position: absolute;
-  bottom: 142px;
+  bottom: 80px;
   right: 50px; /* Adjust the right position to align the controls */
   width: 152px;
   display: flex;
@@ -192,14 +192,14 @@ input[name="category"] + label {
 
 @media (max-width: 768px) {
   .controls {
-    bottom: 110px; /* Adjust controls for medium screens */
+    bottom: 80px; /* Adjust controls for medium screens */
     right: 30px;
   }
 }
 
 @media (max-width: 480px) {
   .controls {
-    bottom: 230px; /* Adjust controls for small screens */
+    bottom: 100px;
     right: 55px;
     width: 20px;
     height: 20px;
