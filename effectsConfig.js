@@ -455,8 +455,8 @@ export const effectsList = {
   virtual_try_on: {
     label: "Virtual Try On",
     categories: {
-      glasses_try_on: {
-        label: "Glasses Try On",
+      eye: {
+        label: "Eye Color",
         effects: [
           { name: "Eye_lenses_Blue.zip", icon: "Eye_lenses_Blue.png" },
           { name: "Eye_lenses_Green.zip", icon: "Eye_lenses_Green.png" },
@@ -464,10 +464,18 @@ export const effectsList = {
           { name: "Eye_lenses_Grey.zip", icon: "Eye_lenses_Grey.jpg" },
 
           { name: "Eye_lenses_Gold.zip", icon: "Eye_lenses_Golden.jpg" },
-
-          { name: "glasses_RayBan4165_Dark.zip", icon: "Glasses_Dark.png" },
         ],
       },
+      glasses_try_on: {
+        label: "Glasses Try On",
+        effects: [
+          { name: "glasses_RayBan4165_Dark.zip", icon: "Glasses_Dark.png" },
+          { name: "glasses_Tony_Start.zip", icon: "Glasses_Dark.png" },
+          { name: "glasses_Pink.zip", icon: "Glasses_Dark.png" },
+          { name: "glasses_white.zip", icon: "Glasses_Dark.png" },
+        ],
+      },
+
       hair: {
         label: "Hair Coloring",
         effects: [
@@ -482,7 +490,11 @@ export const effectsList = {
       },
       head_wearings: {
         label: "Head wearings",
-        effects: [{ name: "VTO_Headdresse_01.zip" }],
+        effects: [
+          { name: "VTO_Headdresse_01.zip", icon: "VTO_Hair_strand.png" },
+          { name: "VTO_Cook.zip", icon: "VTO_Hair_strand.png" },
+          { name: "VTO_police.zip", icon: "VTO_Hair_strand.png" },
+        ],
       },
       jewelry: {
         label: "Jewelry",
