@@ -58,12 +58,8 @@ await player.addModule(...modules);
 const crop = (renderWidth, renderHeight) => {
   const dx = (renderWidth - desiredWidth) / 2;
   const dy = (renderHeight - desiredHeight) / 2;
-  return [
-    Math.max(0, dx),
-    Math.max(0, dy),
-    Math.min(desiredWidth, renderWidth),
-    Math.min(desiredHeight, renderHeight),
-  ];
+
+  return [dx, dy, desiredWidth, desiredHeight];
 };
 
 const startFpsTracking = () => {
