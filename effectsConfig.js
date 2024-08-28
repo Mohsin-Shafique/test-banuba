@@ -41,8 +41,16 @@ export const effectsList = {
     label: "Avatar",
     categories: {
       hades: {
-        label: "Hades",
-        effects: [{ name: "Hades.zip" }]
+        label: "Hades", // Use a string here instead of an array
+        effects: [
+          { name: "Hades.zip" } // Unique object with a single key-value pair
+        ]
+      },
+      beard: {
+        label: "Test", // Use a string here instead of an array
+        effects: [
+          { name: "beard1.zip" } // Unique object with a single key-value pair
+        ]
       }
     }
   },
@@ -472,7 +480,10 @@ export const effectsList = {
           { name: "glasses_RayBan4165_Dark.zip", icon: "Glasses_Dark.png" },
           { name: "glasses_Tony_Start.zip", icon: "Glasses_Dark.png" },
           { name: "glasses_Pink.zip", icon: "Glasses_Dark.png" },
+          { name: "glasses_2.zip", icon: "Glasses_Dark.png" },
+          // { name: "glasses_3.zip", icon: "Glasses_Dark.png" },
           { name: "glasses_white.zip", icon: "Glasses_Dark.png" }
+          // { name: "glasses_round.zip", icon: "Glasses_Dark.png" }
         ]
       },
 
@@ -506,11 +517,11 @@ export const effectsList = {
       makeup: {
         label: "Makeup",
         effects: [
-          { name: "Low_look_clubs.zip", icon: "lips_smile.svg" },
-          { name: "Low_look_clubs_brown.zip", icon: "lips_smile.svg" },
-          { name: "Low_look_clubs_red.zip", icon: "lips_smile.svg" },
-          { name: "Low_look_clubs_red2.zip", icon: "lips_smile.svg" },
-          { name: "Low_look_clubs_red3.zip", icon: "lips_smile.svg" }
+          { name: "Low_look_clubs.zip", icon: "1lip.png" },
+          { name: "Low_look_clubs_brown.zip", icon: "2lip.png" },
+          { name: "Low_look_clubs_red.zip", icon: "3lip.png" },
+          { name: "Low_look_clubs_red2.zip", icon: "4lip.png" },
+          { name: "Low_look_clubs_red3.zip", icon: "5lip.png" }
         ]
       }
     }
