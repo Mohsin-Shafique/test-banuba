@@ -483,7 +483,7 @@ export const effectsList = {
           { name: "VTO_Hair_green.zip", icon: "VTO_Hair_green.png" },
           { name: "VTO_Hair_Grey.zip", icon: "VTO_Hair_Grey.png" },
           { name: "VTO_Hair_Brown.zip", icon: "VTO_Hair_Brown.png" },
-          // { name: "VTO_Hair_Gold.zip", icon: "VTO_Hair_Gold.jpg" },
+          { name: "VTO_Hair_Red.zip", icon: "VTO_Hair_strand.png" },
 
           { name: "VTO_Hair_strand.zip", icon: "VTO_Hair_strand.png" },
         ],
