@@ -178,6 +178,28 @@ export const startPlayer = (source) => {
   }
 };
 
+// Improved permission handling
+const isMobileDevice = () => {
+  return /Mobi|Android/i.test(navigator.userAgent);
+};
+
+// Improved permission handling
+const requestPermissions = async () => {
+  try {
+    await navigator.mediaDevices.getUserMedia({ video: true });
+  } catch (error) {
+    console.error("Camera permission error:", error);
+    alert(
+      "Camera access is required for this app to function. Please grant permissions."
+    );
+  }
+};
+
+// Ensure to call requestPermissions on mobile devices before starting the player
+if (isMobileDevice()) {
+  requestPermissions();
+}
+
 export const applyEffect = async (effectName) => {
   currentEffect = new Effect(effectName);
   await player.applyEffect(currentEffect);

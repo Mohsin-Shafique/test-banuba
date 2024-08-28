@@ -460,7 +460,11 @@ export const effectsList = {
         effects: [
           { name: "Eye_lenses_Blue.zip", icon: "Eye_lenses_Blue.png" },
           { name: "Eye_lenses_Green.zip", icon: "Eye_lenses_Green.png" },
-          { name: "Eye_lenses_Red.zip", icon: "Eye_lenses_Red.png" },
+          { name: "Eye_lenses_Red.zip", icon: "Eye_lenses_Red.jpg" },
+          { name: "Eye_lenses_Grey.zip", icon: "Eye_lenses_Grey.jpg" },
+
+          { name: "Eye_lenses_Gold.zip", icon: "Eye_lenses_Golden.jpg" },
+
           { name: "glasses_RayBan4165_Dark.zip", icon: "Glasses_Dark.png" },
         ],
       },
@@ -469,6 +473,10 @@ export const effectsList = {
         effects: [
           { name: "VTO_Hair_blue.zip", icon: "VTO_Hair_blue.png" },
           { name: "VTO_Hair_green.zip", icon: "VTO_Hair_green.png" },
+          { name: "VTO_Hair_Grey.zip", icon: "VTO_Hair_Grey.jpg" },
+          { name: "VTO_Hair_Brown.zip", icon: "VTO_Hair_Brown.jpg" },
+          { name: "VTO_Hair_Gold.zip", icon: "VTO_Hair_Gold.jpg" },
+
           { name: "VTO_Hair_strand.zip", icon: "VTO_Hair_strand.png" },
         ],
       },
