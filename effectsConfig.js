@@ -508,7 +508,9 @@ export const effectsList = {
         effects: [
           { name: "Low_look_clubs.zip", icon: "lips_smile.svg" },
           { name: "Low_look_clubs_brown.zip", icon: "lips_smile.svg" },
-          { name: "Low_look_clubs_red.zip", icon: "lips_smile.svg" }
+          { name: "Low_look_clubs_red.zip", icon: "lips_smile.svg" },
+          { name: "Low_look_clubs_red2.zip", icon: "lips_smile.svg" },
+          { name: "Low_look_clubs_red3.zip", icon: "lips_smile.svg" }
         ]
       }
     }
