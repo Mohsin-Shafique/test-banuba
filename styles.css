@@ -809,13 +809,18 @@ input[name="effect"]:checked + .effect-icon__border {
 }
 
 .popups {
-  position: absolute;
-  left: 510px;
-  top: 20px;
+  position: fixed; /* Change from relative to fixed to position relative to the viewport */
+  left: 50%; /* Center horizontally */
+  top: 10%; /* Center vertically */
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Offset by 50% to achieve perfect centering */
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
+  z-index: 100000; /* Ensure it's on top of other content */
 }
 
 .popup {
@@ -829,12 +834,15 @@ input[name="effect"]:checked + .effect-icon__border {
   border-radius: 12px;
   background: #fff;
   box-shadow: 0 12px 32px 0 rgba(51, 61, 83, 0.1);
-  transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 300ms; /* Corrected transition time */
 }
 
 .popup__hidden {
-  opacity: 0;
+  opacity: 0; /* Set opacity to 0 to hide the popup */
+  z-index: -1; /* Lower the z-index when hidden */
+  display: none; /* Use display: none to remove it from layout */
 }
+
 .popup__bold {
   margin-right: 8px;
   font-weight: 700;
