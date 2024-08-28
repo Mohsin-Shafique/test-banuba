@@ -42,9 +42,9 @@ export const effectsList = {
     categories: {
       hades: {
         label: "Hades",
-        effects: [{ name: "Hades.zip" }],
-      },
-    },
+        effects: [{ name: "Hades.zip" }]
+      }
+    }
   },
 
   beauty_touch_up: {
@@ -59,7 +59,7 @@ export const effectsList = {
             params: ["FaceMorph.face"],
             arg: "narrowing",
             direction: 1,
-            icon: "face_narrowing.svg",
+            icon: "face_narrowing.svg"
           },
           {
             name: "Morphings_1.7.0.zip",
@@ -67,7 +67,7 @@ export const effectsList = {
             params: ["FaceMorph.face"],
             arg: "v_shape",
             direction: 1,
-            icon: "face_v_shape.svg",
+            icon: "face_v_shape.svg"
           },
           {
             name: "Morphings_1.7.0.zip",
@@ -75,7 +75,7 @@ export const effectsList = {
             params: ["FaceMorph.face"],
             arg: "cheekbones_narrowing",
             direction: 1,
-            icon: "face_cheekbones_narrowing.svg",
+            icon: "face_cheekbones_narrowing.svg"
           },
           {
             name: "Morphings_1.7.0.zip",
@@ -83,7 +83,7 @@ export const effectsList = {
             params: ["FaceMorph.face"],
             arg: "cheeks_narrowing",
             direction: 1,
-            icon: "face_cheeks_narrowing.svg",
+            icon: "face_cheeks_narrowing.svg"
           },
           {
             name: "Morphings_1.7.0.zip",
@@ -91,7 +91,7 @@ export const effectsList = {
             params: ["FaceMorph.face"],
             arg: "jaw_narrowing",
             direction: 1,
-            icon: "face_jaw_narrowing.svg",
+            icon: "face_jaw_narrowing.svg"
           },
           {
             name: "Morphings_1.7.0.zip",
@@ -99,7 +99,7 @@ export const effectsList = {
             params: ["FaceMorph.face"],
             arg: "chin_shortening",
             direction: 1,
-            icon: "face_chin_shortening.svg",
+            icon: "face_chin_shortening.svg"
           },
           {
             name: "Morphings_1.7.0.zip",
@@ -107,7 +107,7 @@ export const effectsList = {
             params: ["FaceMorph.face"],
             arg: "chin_narrowing",
             direction: 1,
-            icon: "face_chin_narrowing.svg",
+            icon: "face_chin_narrowing.svg"
           },
           {
             name: "Morphings_1.7.0.zip",
@@ -116,7 +116,7 @@ export const effectsList = {
             arg: "sunken_cheeks",
             minValue: "0",
             direction: 1,
-            icon: "face_sunken_cheeks.svg",
+            icon: "face_sunken_cheeks.svg"
           },
           {
             name: "Morphings_1.7.0.zip",
@@ -124,9 +124,9 @@ export const effectsList = {
             params: ["FaceMorph.face"],
             arg: "cheeks_jaw_narrowing",
             direction: 1,
-            icon: "face_cheeks_jaw_narrowing.svg",
-          },
-        ],
+            icon: "face_cheeks_jaw_narrowing.svg"
+          }
+        ]
       },
       nose: {
         label: "Nose",
@@ -137,7 +137,7 @@ export const effectsList = {
             params: ["FaceMorph.nose"],
             arg: "width",
             direction: 1,
-            icon: "nose_width.svg",
+            icon: "nose_width.svg"
           },
           {
             name: "Morphings_1.7.0.zip",
@@ -145,7 +145,7 @@ export const effectsList = {
             params: ["FaceMorph.nose"],
             arg: "length",
             direction: 1,
-            icon: "nose_length.svg",
+            icon: "nose_length.svg"
           },
           {
             name: "Morphings_1.7.0.zip",
@@ -153,9 +153,9 @@ export const effectsList = {
             params: ["FaceMorph.nose"],
             arg: "tip_width",
             direction: -1,
-            icon: "nose_tip_width.svg",
-          },
-        ],
+            icon: "nose_tip_width.svg"
+          }
+        ]
       },
       eyes: {
         label: "Eyes",
@@ -167,7 +167,7 @@ export const effectsList = {
             arg: "rounding",
             minValue: "0",
             direction: 1,
-            icon: "eyes_rounding.svg",
+            icon: "eyes_rounding.svg"
           },
           {
             name: "Morphings_1.7.0.zip",
@@ -175,7 +175,7 @@ export const effectsList = {
             params: ["FaceMorph.eyes"],
             arg: "enlargement",
             direction: 1,
-            icon: "eyes_enlargement.svg",
+            icon: "eyes_enlargement.svg"
           },
           {
             name: "Morphings_1.7.0.zip",
@@ -183,7 +183,7 @@ export const effectsList = {
             params: ["FaceMorph.eyes"],
             arg: "height",
             direction: 1,
-            icon: "eyes_height.svg",
+            icon: "eyes_height.svg"
           },
           {
             name: "Morphings_1.7.0.zip",
@@ -191,7 +191,7 @@ export const effectsList = {
             params: ["FaceMorph.eyes"],
             arg: "spacing",
             direction: 1,
-            icon: "eyes_spacing.svg",
+            icon: "eyes_spacing.svg"
           },
           {
             name: "Morphings_1.7.0.zip",
@@ -199,7 +199,7 @@ export const effectsList = {
             params: ["FaceMorph.eyes"],
             arg: "squint",
             direction: -1,
-            icon: "eyes_squint.svg",
+            icon: "eyes_squint.svg"
           },
           {
             name: "Morphings_1.7.0.zip",
@@ -207,7 +207,7 @@ export const effectsList = {
             params: ["FaceMorph.eyes"],
             arg: "lower_eyelid_pos",
             direction: 1,
-            icon: "eyes_lower_eyelid_pos.svg",
+            icon: "eyes_lower_eyelid_pos.svg"
           },
           {
             name: "Morphings_1.7.0.zip",
@@ -215,9 +215,9 @@ export const effectsList = {
             params: ["FaceMorph.eyes"],
             arg: "lower_eyelid_size",
             direction: -1,
-            icon: "eyes_lower_eyelid_size.svg",
-          },
-        ],
+            icon: "eyes_lower_eyelid_size.svg"
+          }
+        ]
       },
       eyebrows: {
         label: "Eyebrows",
@@ -228,7 +228,7 @@ export const effectsList = {
             params: ["FaceMorph.eyebrows"],
             arg: "spacing",
             direction: -1,
-            icon: "eyebrows_spacing.svg",
+            icon: "eyebrows_spacing.svg"
           },
           {
             name: "Morphings_1.7.0.zip",
@@ -236,7 +236,7 @@ export const effectsList = {
             params: ["FaceMorph.eyebrows"],
             arg: "height",
             direction: -1,
-            icon: "eyebrows_height.svg",
+            icon: "eyebrows_height.svg"
           },
           {
             name: "Morphings_1.7.0.zip",
@@ -244,9 +244,9 @@ export const effectsList = {
             params: ["FaceMorph.eyebrows"],
             arg: "bend",
             direction: 1,
-            icon: "eyebrows_bend.svg",
-          },
-        ],
+            icon: "eyebrows_bend.svg"
+          }
+        ]
       },
       lips: {
         label: "Lips",
@@ -257,7 +257,7 @@ export const effectsList = {
             params: ["FaceMorph.lips"],
             direction: 1,
             arg: "size",
-            icon: "lips_size.svg",
+            icon: "lips_size.svg"
           },
           {
             name: "Morphings_1.7.0.zip",
@@ -265,7 +265,7 @@ export const effectsList = {
             params: ["FaceMorph.lips"],
             direction: 1,
             arg: "height",
-            icon: "lips_height.svg",
+            icon: "lips_height.svg"
           },
           {
             name: "Morphings_1.7.0.zip",
@@ -273,7 +273,7 @@ export const effectsList = {
             params: ["FaceMorph.lips"],
             direction: 1,
             arg: "thickness",
-            icon: "lips_thickness.svg",
+            icon: "lips_thickness.svg"
           },
           {
             name: "Morphings_1.7.0.zip",
@@ -281,7 +281,7 @@ export const effectsList = {
             params: ["FaceMorph.lips"],
             direction: -1,
             arg: "mouth_size",
-            icon: "lips_mouth_size.svg",
+            icon: "lips_mouth_size.svg"
           },
           {
             name: "Morphings_1.7.0.zip",
@@ -290,7 +290,7 @@ export const effectsList = {
             direction: 1,
             minValue: "0",
             arg: "smile",
-            icon: "lips_smile.svg",
+            icon: "lips_smile.svg"
           },
           {
             name: "Morphings_1.7.0.zip",
@@ -298,9 +298,9 @@ export const effectsList = {
             params: ["FaceMorph.lips"],
             direction: -1,
             arg: "shape",
-            icon: "lips_shape.svg",
-          },
-        ],
+            icon: "lips_shape.svg"
+          }
+        ]
       },
       skin: {
         label: "Skin",
@@ -310,9 +310,9 @@ export const effectsList = {
             control: "slider",
             params: ["Skin.softening"],
             minValue: 0,
-            direction: 1,
-          },
-        ],
+            direction: 1
+          }
+        ]
       },
       eye_whitening: {
         label: "Eye Whitening",
@@ -320,9 +320,9 @@ export const effectsList = {
           {
             name: "EyesWitening_Toggle.zip",
             control: "toggle",
-            params: ["onDataUpdate"],
-          },
-        ],
+            params: ["onDataUpdate"]
+          }
+        ]
       },
       tooth_whitening: {
         label: "Tooth Whitening",
@@ -330,11 +330,11 @@ export const effectsList = {
           {
             name: "TeethWitening_Toggle.zip",
             control: "toggle",
-            params: ["onDataUpdate"],
-          },
-        ],
-      },
-    },
+            params: ["onDataUpdate"]
+          }
+        ]
+      }
+    }
   },
 
   // face_tracking: {
@@ -399,23 +399,23 @@ export const effectsList = {
     categories: {
       animation: {
         label: "Animation",
-        effects: [{ name: "Spider2.zip" }],
+        effects: [{ name: "Spider2.zip" }]
       },
       foreground_effects: {
         label: "Foreground effects",
-        effects: [{ name: "Retrowave.zip" }],
+        effects: [{ name: "Retrowave.zip" }]
       },
       masks_morphing: {
         label: "Masks with Morphing",
-        effects: [{ name: "TrollGrandma.zip" }],
+        effects: [{ name: "TrollGrandma.zip" }]
       },
       multiple_face_detection: {
         label: "Multiple Face Detection",
-        effects: [{ name: "MinnieMouse7_multi.zip" }],
+        effects: [{ name: "MinnieMouse7_multi.zip" }]
       },
       physics: {
         label: "Physics",
-        effects: [{ name: "ConfusedRabbit.zip" }],
+        effects: [{ name: "ConfusedRabbit.zip" }]
       },
       triggers: {
         label: "Triggers",
@@ -425,11 +425,11 @@ export const effectsList = {
             control: "trigger",
             params: ["GetMouthStatus()"],
             tip: "Open your mouth",
-            icon: "Gangster.svg",
-          },
-        ],
-      },
-    },
+            icon: "Gangster.svg"
+          }
+        ]
+      }
+    }
   },
 
   // hand_tracking: {
@@ -463,8 +463,8 @@ export const effectsList = {
           { name: "Eye_lenses_Red.zip", icon: "Eye_lenses_Red.png" },
           { name: "Eye_lenses_Grey.zip", icon: "Eye_lenses_Grey.png" },
 
-          { name: "Eye_lenses_Gold.zip", icon: "Eye_lenses_Golden.png" },
-        ],
+          { name: "Eye_lenses_Gold.zip", icon: "Eye_lenses_Golden.png" }
+        ]
       },
       glasses_try_on: {
         label: "Glasses Try On",
@@ -472,8 +472,8 @@ export const effectsList = {
           { name: "glasses_RayBan4165_Dark.zip", icon: "Glasses_Dark.png" },
           { name: "glasses_Tony_Start.zip", icon: "Glasses_Dark.png" },
           { name: "glasses_Pink.zip", icon: "Glasses_Dark.png" },
-          { name: "glasses_white.zip", icon: "Glasses_Dark.png" },
-        ],
+          { name: "glasses_white.zip", icon: "Glasses_Dark.png" }
+        ]
       },
 
       hair: {
@@ -485,30 +485,34 @@ export const effectsList = {
           { name: "VTO_Hair_Brown.zip", icon: "VTO_Hair_Brown.png" },
           { name: "VTO_Hair_red.zip", icon: "VTO_Hair_strand.png" },
 
-          { name: "VTO_Hair_strand.zip", icon: "VTO_Hair_strand.png" },
-        ],
+          { name: "VTO_Hair_strand.zip", icon: "VTO_Hair_strand.png" }
+        ]
       },
       head_wearings: {
         label: "Head wearings",
         effects: [
           { name: "VTO_Headdresse_01.zip", icon: "VTO_Hair_strand.png" },
           { name: "VTO_Cook.zip", icon: "VTO_Hair_strand.png" },
-          { name: "VTO_police.zip", icon: "VTO_Hair_strand.png" },
-        ],
+          { name: "VTO_police.zip", icon: "VTO_Hair_strand.png" }
+        ]
       },
       jewelry: {
         label: "Jewelry",
         effects: [
           { name: "earrings_01.zip", icon: "earrings_01.png" },
-          { name: "necklace_01.zip", icon: "necklace_01.png" },
-        ],
+          { name: "necklace_01.zip", icon: "necklace_01.png" }
+        ]
       },
       makeup: {
         label: "Makeup",
-        effects: [{ name: "Low_look_clubs.zip" }],
-      },
-    },
-  },
+        effects: [
+          { name: "Low_look_clubs.zip", icon: "lips_smile.svg" },
+          { name: "Low_look_clubs_brown.zip", icon: "lips_smile.svg" },
+          { name: "Low_look_clubs_red.zip", icon: "lips_smile.svg" }
+        ]
+      }
+    }
+  }
 
   // import: {
   //   label: "Imported",
